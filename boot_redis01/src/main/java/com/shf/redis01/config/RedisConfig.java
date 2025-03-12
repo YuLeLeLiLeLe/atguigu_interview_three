@@ -14,7 +14,7 @@ import java.io.Serializable;
 @Configuration
 public class RedisConfig {
     /**
-     * 保证不是序列化后的乱码配置11111111
+     * 保证不是序列化后的乱码配置dddddd
      */
     @Bean
     public RedisTemplate<String, Serializable> redisTemplate(LettuceConnectionFactory connectionFactory) {
