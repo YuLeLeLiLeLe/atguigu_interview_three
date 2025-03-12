@@ -14,7 +14,7 @@ import java.io.Serializable;
 @Configuration
 public class RedisConfig {
     /**
-     * 保证不是序列化后的乱码配置
+     * 保证不是序列化后的乱码配置11111111
      */
     @Bean
     public RedisTemplate<String, Serializable> redisTemplate(LettuceConnectionFactory connectionFactory) {
@@ -28,7 +28,7 @@ public class RedisConfig {
     @Bean
     public Redisson redisson() {
         Config config = new Config();
-        config.useSingleServer().setAddress("redis://192.168.120.20:6379").setDatabase(0);
+        config.useSingleServer().setAddress("redis://192.168.56.10:6379").setDatabase(0);
         return (Redisson) Redisson.create(config);
     }
 
